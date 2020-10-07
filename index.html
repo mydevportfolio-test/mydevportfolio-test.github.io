@@ -7,9 +7,14 @@
 
 		<title>Chris Dermody | GitHub portfolio page</title>
 
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+
+		<!-- Bootstrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+		<!-- Devicons -->
 		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- Leave those next 4 lines if you care about users using IE8 -->
@@ -18,195 +23,255 @@
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
-		<style>
-			h1, h2, h3, h4, h5{
-				color:#4A4E69 !important;
-				font-weight: 300;
-				font-family: 'Open Sans', sans-serif;
-			}
+	<style>
+		html {
+			background-color: #fff;
+		}
+		body {
+		  background: url('https://i.imgur.com/tIm2o5z.png');
+		  background-attachment: fixed;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		  padding: 0 5vw;
+		  min-height: 100vh;
+		}
 
-			p {
-				color: #4A4E69;
-				font-weight: 300;
-				font-family: 'Open Sans', sans-serif;
-			}
+		.nav-default {
+			background: white;
 
-			.profile-pic {
-				box-shadow: 0px 4px 6px 2px lightgrey;
-			  border-radius: 50%
-			}
+		}
 
-			.m-t-1 {
-				margin-top:1em;
-			}
+		h1, h2, h3, h4, h5{
+			color:#4A4E69 !important;
+			font-weight: 300;
+			font-family: 'Open Sans', sans-serif;
+		}
 
-			.p-t-1 {
-				padding-top:1em;
-			}
+		p {
+			color: #4A4E69;
+			font-weight: 300;
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		.main-container {
+			padding-top:50px;
+		}
+
+		.about-me h1 {
+			font-size:24px;
+		}
+
+		.about-me h2 {
+			font-size:20px;
+		}
+
+		.about-me h3 {
+			font-size:18px;
+		}
+
+		.bottom-cta {
+			background: white;
+			position: fixed;
+			width: 100%;
+			padding: 15px;
+			box-shadow: 0 0 2px 3px lightgrey;
+			left: 0;
+			z-index: 10000;
+			bottom: 0;
+		}
+
+		.cta-icon {
+			font-size:2em;
+			margin:5px;
+		}
 
 
-			.about-me {
-				margin-top:25px;
-			}
+		.cta-icon:hover,
+		.cta-icon:focus {
+			text-decoration: none;
+		}
 
-			.navbar-default {
-				background-color: #C9ADA7;
-				background: none;
-				border: none;
-				border-radius:0;
-			}
+		.profile-pic {
+			box-shadow: 0px 4px 6px 2px lightgrey;
+		  border-radius: 50%;
+		  max-width: 70%;
+		}
 
-			.repo-row {
-				padding: 65px 10px;
-			}
+		/*.m-t-1 {
+			margin-top:1em;
+		}
 
-			.repo-row:nth-child(odd) {
-			  background-color: lightgrey;
-			  -webkit-clip-path: polygon(0 0%, 100% 4%, 100% 96%, 0% 100%);
-			  clip-path: polygon(0 0%, 100% 4%, 100% 96%, 0% 100%);
-			}
+		.p-t-1 {
+			padding-top:1em;
+		}*/
 
-			.vertical-align {
-				display: flex;
-			  align-items: center;
-			  justify-content: center;
-			}
 
-			@media (max-width: 991px) {
-			    .row.vertical-align {
-			        display: block; /* Turn off the flexible box layout */
-			    }
-			}
+		/*.about-me {
+			margin-top:25px;
+		}*/
 
-			.work-item-img {
-				max-height: 480px;
-				max-width:80%;
-			}
+		.navbar-default {
+			background-color: #C9ADA7;
+			background: none;
+			border: none;
+			border-radius:0;
+		}
 
-			.row-footer {
-			/*	background-color: lightgrey;
-				-webkit-clip-path: polygon(0 0%, 100% 4%, 100% 100%, 0% 100%);
-				clip-path: polygon(0 0%, 100% 4%, 100% 100%, 0% 100%);*/
-				padding: 65px 10px;
-			}
+		/*.row-footer {
+			background-color: lightgrey;
+			-webkit-clip-path: polygon(0 0%, 100% 4%, 100% 100%, 0% 100%);
+			clip-path: polygon(0 0%, 100% 4%, 100% 100%, 0% 100%);
+			padding: 65px 10px;
+		}*/
 
-			.linkedin-btn {
-				width:140px;
-				box-shadow: 0px 2px 5px 1px lightgrey;
-				padding: 12px;
-				border-radius: 5px;
-			}
+		.work-item-row {
+			/*padding: 10% 0;*/
+			margin-bottom:100px;
+		}
 
-			.btn-launch {
-				width:100%;
-				max-width:200px;
-				background-color: #549657;
-				color:white;
-				box-shadow: 0px 2px 5px 1px darkgrey;
-			}
+		.row-tools {
+		  padding: 50px 0;
+		}
 
-			.btn-launch:hover,
-			.btn-launch:focus {
-				color: white;
-				background: #3d7140;
-			}
+		/*.linkedin-btn {
+			width:140px;
+			box-shadow: 0px 2px 5px 1px lightgrey;
+			padding: 12px;
+			border-radius: 5px;
+		}*/
 
-			.techUsed {
-				font-size:54px;
-				padding: 40px 0 0;
-			}
+		.btn-launch {
+			width:100%;
+			max-width:200px;
+			background-color: #549657;
+			color:white;
+			box-shadow: 0px 2px 5px 1px darkgrey;
+		}
 
-			.techUsed i {
-				margin:0 15px;
-			}
+		.btn-launch:hover,
+		.btn-launch:focus {
+			color: white;
+			background: #3d7140;
+		}
 
-			.toolsUsed {
-				font-size: 100px;
-			  padding: 40px 0;
-			}
+		.about-side {
+			position:fixed;
+		}
 
-			.toolsUsed i {
-				margin:0 15px;
-			}
+		.project {
+			background: white;
+			border-radius:5px;
+			box-shadow: 0 0 2px 2px lightgrey;
+			padding: 30px;
+		}
 
-			.about {
-				margin-bottom:80px;
-			}
-		</style>
+		.project img {
+			margin:auto;
+		}
+
+		.techIcon {
+			font-size: 34px;
+		}
+
+	</style>
+
 
 	</head>
 	<body>
 
+		<div class="container main-container">
 
-		<div class="container-fluid">
 
-			<section class="about">
-				<div class="text-center" style="margin-top:100px">
-					<img src="" width=200 class="profile-pic">
-					<h1>Chris Dermody</h1>
-				  <h3>Dublin</h3>
-				  <h5>BIO</h5>
+			<div class="row">
 
-				  <div class="text-center" style="margin:20px">
-				  	<a href="mailto:chrisdermody1+mdptest@gmail.com" class="" target="_blank">
-				  		chrisdermody1+mdptest@gmail.com
-				  	</a>
-				  </div>
+				<!-- side content -->
+				<div class="col-sm-3 about-me about-side text-center hidden-xs">
+						<img src="" width=200 class="profile-pic img-responsive center-block">
+						<h1>Chris Dermody</h1>
+						<h2>Dublin</h2>
+						<h3>BIO</h3>
+
+						<div class="text-center" style="margin:20px">
+							<!-- <a href="#" class="cta-icon"><i class="devicon-twitter-plain colored"></i></a> -->
+							<a href="#" class="cta-icon"><i class="devicon-github-plain colored"></i></a>
+						</div>
 				</div>
-			</section>
 
-			<section class="repos">
-		  		<div class="row repo-row">
-		  		    <div class="col-sm-8 col-sm-offset-2">
-		  		    	<div class="row vertical-align">
-				  		    	<div class="col-xs-12 text-center">
-				  		    		<p>A description about my second project</p>
-				  		    	</div>
-		  		    		
-		  	    		</div>
-		  	    		<div class="row text-center techUsed">
-		  	    			<div class="col-xs-12">
-		  		    			<i class="devicon-html5-plain-wordmark colored"></i>
-		  		    			<i class="devicon-wordpress-plain-wordmark colored"></i>
-		  		    			<i class="devicon-angularjs-plain-wordmark colored"></i>
-		  	    			</div>
-		  	    		</div>
-		  				</div>
-		  		</div>
-		  		<div class="row repo-row">
-		  		    <div class="col-sm-8 col-sm-offset-2">
-		  		    	<div class="row vertical-align">
-				  		    	<div class="col-xs-12 text-center">
-					  		    		<h2><a href="https://github.com/mydevportfolio-test/myfirstrepo" target="blank">myfirstrepo</a></h2>
-				  		    		<p></p>
-				  		    	</div>
-		  		    		
-		  	    		</div>
-		  	    		<div class="row text-center techUsed">
-		  	    			<div class="col-xs-12">
-		  	    			</div>
-		  	    		</div>
-	  			    		<div class="row text-center" style="margin:20px;">
-	  			    				<a class="btn btn-launch" href="https://github.com/mydevportfolio-test/myfirstrepo" target="blank">View on GitHub</a>
-	  		    			</div>
-		  				</div>
-		  		</div>
+				<div class="text-center about-me hidden-sm hidden-md hidden-lg">
+						<img src="" width=200 class="profile-pic img-responsive center-block">
+						<h1>Chris Dermody</h1>
+						<h2>Dublin</h2>
+						<h3>BIO</h3>
 
-
-
-			</section>			
-
-			<div class="row row-footer text-center">
-				<div class="col">
-  				<div style="margin:50px;">
-  					<h3 style="margin:50px 0 15px">I'm available for work, get in touch</h3>
-				  	<a href="mailto:chrisdermody1+mdptest@gmail.com" class="" target="_blank">
-				  		chrisdermody1+mdptest@gmail.com
-				  	</a>
-
-				  </div>
+						<div class="text-center" style="margin:20px">
+							<a href="mailto:chrisdermody1+mdptest@gmail.com" class="" target="_blank">
+								chrisdermody1+mdptest@gmail.com
+							</a>
+						</div>
 				</div>
+
+				<div class="bottom-cta hidden-sm hidden-md hidden-lg text-center">
+					<div class="btn btn-success">Get in touch</div>
+				</div>
+
+
+				<!-- main content -->
+				<div class="col-sm-9 col-sm-offset-3">
+
+
+					<div class="row work-item-row">
+							<div class="col-sm-8 col-sm-offset-2 project">
+
+
+									<h2 class="text-center">Second Project</h2>
+
+								<p>A description about my second project</p>
+
+								<div class="row text-center">
+									<div class="col-xs-12">
+											<i class="devicon-html5-plain-wordmark colored techIcon"></i>
+											<i class="devicon-wordpress-plain-wordmark colored techIcon"></i>
+											<i class="devicon-angularjs-plain-wordmark colored techIcon"></i>
+									</div>
+								</div>
+
+							</div>
+					</div>
+					<div class="row work-item-row">
+							<div class="col-sm-8 col-sm-offset-2 project">
+
+
+									<h2 class="text-center"><a href="html_url" target="blank">myfirstrepo</a></h2>
+
+								<p></p>
+
+								<div class="row text-center">
+									<div class="col-xs-12">
+									</div>
+								</div>
+
+								<div class="row text-center" style="margin:20px;">
+										<a class="btn btn-launch" href="https://github.com/mydevportfolio-test/myfirstrepo" target="blank">Launch</a>
+								</div>
+							</div>
+					</div>
+
+
+					<div class="row row-footer text-center">
+						<div class="col">
+							<div style="margin:50px;">
+								<h3 style="margin:50px 0 15px">I'm available for work, get in touch</h3>
+							</div>
+						</div>
+					</div>
+
+
+				</div> <!-- end main content -->
+
+
+
 			</div>
+
 
 
 
@@ -220,7 +285,17 @@
 	  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
 	  crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		<!-- <script src="js/myScripts.js"></script> -->
+
+		<script>
+			$(document).scroll(function() {
+			  var y = $(this).scrollTop();
+			  if (y > 500) {
+			    $('.bottom-cta').slideDown();
+			  } else {
+			    $('.bottom-cta').slideUp();
+			  }
+			});
+		</script>
 
 	</body>
 </html>
